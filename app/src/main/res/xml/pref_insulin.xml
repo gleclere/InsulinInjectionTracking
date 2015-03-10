@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceScreen android:title="@string/insulin_rapid">
+	    <!-- Rapid -->
+	    <EditTextPreference 
+	        android:key="insulin_rapid_min"
+	        android:title="@string/pref_insulin_min"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_rapid_max"
+	        android:title="@string/pref_insulin_max"
+	        android:defaultValue="10"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_rapid_step"
+	        android:title="@string/pref_insulin_step"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="@string/insulin_short">
+	    <!-- Short -->
+	    <EditTextPreference 
+	        android:key="insulin_short_min"
+	        android:title="@string/pref_insulin_min"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_short_max"
+	        android:title="@string/pref_insulin_max"
+	        android:defaultValue="10"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_short_step"
+	        android:title="@string/pref_insulin_step"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+    </PreferenceScreen>
+    
+    <PreferenceScreen android:title="@string/insulin_intermediate">
+	    <!-- Intermediate -->
+	    <EditTextPreference 
+	        android:key="insulin_intermediate_min"
+	        android:title="@string/pref_insulin_min"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_intermediate_max"
+	        android:title="@string/pref_insulin_max"
+	        android:defaultValue="10"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_intermediate_step"
+	        android:title="@string/pref_insulin_step"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+    </PreferenceScreen>
+    
+    <PreferenceScreen android:title="@string/insulin_long">
+	    <!-- Long -->
+	    <EditTextPreference 
+	        android:key="insulin_long_min"
+	        android:title="@string/pref_insulin_min"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_long_max"
+	        android:title="@string/pref_insulin_max"
+	        android:defaultValue="10"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_long_step"
+	        android:title="@string/pref_insulin_step"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+    </PreferenceScreen>
+    
+    <PreferenceScreen android:title="@string/insulin_premixed">
+	    <!-- Pre-mixed -->
+	    <EditTextPreference 
+	        android:key="insulin_premixed_min"
+	        android:title="@string/pref_insulin_min"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_premixed_max"
+	        android:title="@string/pref_insulin_max"
+	        android:defaultValue="10"
+	        android:inputType="number"/>
+	    
+	    <EditTextPreference
+	        android:key="insulin_premixed_step"
+	        android:title="@string/pref_insulin_step"
+	        android:defaultValue="0.5"
+	        android:inputType="number"/>
+    </PreferenceScreen>
+</PreferenceScreen>

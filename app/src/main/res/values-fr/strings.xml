@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Insulin Injection Tracking</string>
+    <string name="action_settings">Paramètres</string>
+
+    <!-- Content Description -->
+
+    <string name="right_arm_area">Bras droit</string>
+    <string name="left_arm_area">Bras gauche</string>
+    <string name="right_leg_area">Cuisse droite</string>
+    <string name="left_leg_area">Cuisse gauche</string>
+    <string name="stomach_area">Ventre</string>
+    <string name="right_buttock_area">Fesse droite</string>
+    <string name="left_buttock_area">Fesse gauche</string>
+    <string name="error_insert_ii">Erreur lors de l\'enregistrement des données</string>
+    
+    <!--  Vocabulary -->
+    <string name="insulin_rapid">Ultra-rapide</string>
+    <string name="insulin_short">Rapide</string>
+    <string name="insulin_intermediate">Retard</string>
+    <string name="insulin_long">Lente</string>
+    <string name="insulin_premixed">Mélange</string>
+    
+    <!-- Releve Activity -->
+
+    <string name="title_activity_releve">Relevés</string>
+    <string name="unknow">Inconnu</string>
+    <string name="action_share">Export</string>
+    <string name="date">Date</string>
+    <string name="Heure">Heure</string>
+    <string name="insulin_type">Type d\'insuline</string>
+    <string name="insulin_dose">Dose</string>
+    <string name="dialog_deleteInjection_msg">Voulez-vous supprimer ce relevé ?</string>
+    <string name="dialog_deleteInjection_delete">Supprimer</string>
+    <string name="dialog_deleteInjection_cancel">Annuler</string>
+    
+    <!-- Export Activity -->
+
+    <string name="title_activity_export">Export</string>
+    <string name="export">Export</string>
+	<string name="startDate">Date de début</string>    
+	<string name="endDate">Date de fin</string>
+	<string name="errorDateMismatch">La date de début doit être antérieure à la date de fin</string>
+
+	<string name="export_subject">Export de 2IT pour %1$s</string>
+	<string name="export_range_date">Export de Injection Insulin Tracking du %1$s au %2$s.</string>
+
+	<!-- Database columns -->
+    <string name="db_userId">Utilisateur</string>
+    <string name="db_date">Date</string>
+    <string name="db_time">Heure</string>
+    <string name="db_type">Type</string>
+    <string name="db_dose">Dose</string>
+    <string name="db_area">Zone</string>
+        		
+</resources>

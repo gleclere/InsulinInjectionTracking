@@ -1,0 +1,15 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.altairdevelopment.insulininjectiontracking.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_general" />
+    <header
+        android:fragment="com.altairdevelopment.insulininjectiontracking.SettingsActivity$InsulinPreferenceFragment"
+        android:title="@string/pref_header_insulin" />
+    <header
+        android:fragment="com.altairdevelopment.insulininjectiontracking.SettingsActivity$NotificationPreferenceFragment"
+        android:title="@string/pref_header_export" />
+
+</preference-headers>

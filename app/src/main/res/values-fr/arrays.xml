@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="types">
+        <item>Ultra-rapide</item>
+        <item>Rapide</item>
+        <item>Retard</item>
+		<item>Lente</item>
+		<item>Mélange</item>
+	</string-array>
+
+</resources>

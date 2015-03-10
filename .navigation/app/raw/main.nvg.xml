@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.altairdevelopment.insulininjectiontracking.ReleveActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.altairdevelopment.insulininjectiontracking.ReleveActivity"/>
+      <point      
+        x = "1768"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.altairdevelopment.insulininjectiontracking.ExportActivity"/>
+      <point      
+        x = "1686"      
+        y = "1065"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.altairdevelopment.insulininjectiontracking.ExportActivity"/>
+      <point      
+        x = "2951"      
+        y = "1065"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.altairdevelopment.insulininjectiontracking.SettingsActivity"/>
+      <point      
+        x = "5572"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.altairdevelopment.insulininjectiontracking.MainActivity"/>
+      <point      
+        x = "1698"      
+        y = "2512"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.altairdevelopment.insulininjectiontracking.MainActivity"/>
+      <point      
+        x = "2963"      
+        y = "2512"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

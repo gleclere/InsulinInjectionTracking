@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    tools:context="${packageName}.${activityClass}"  >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp" >
+        
+        <TableLayout
+	        android:id="@+id/injectionTable"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+    	</TableLayout>  	
+	</ScrollView>
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/bodyLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/body_picture"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/human_body" />
+
+            <ImageView
+                android:id="@+id/imageSelLeftArm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBody"
+                android:layout_alignLeft="@id/imageBody"
+                android:contentDescription="@string/left_arm_area"
+                android:src="@drawable/non_selected_square" />
+
+            <ImageView
+                android:id="@+id/imageSelLeftLeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBody"
+                android:layout_alignLeft="@id/imageBody"
+                android:contentDescription="@string/left_leg_area"
+                android:src="@drawable/non_selected_square" />
+            
+            <ImageView
+                android:id="@+id/imageSelStomach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBody"
+                android:layout_alignLeft="@id/imageBody"
+                android:contentDescription="@string/stomach_area"
+                android:src="@drawable/non_selected_square" />
+
+            <ImageView
+                android:id="@+id/imageSelRightLeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBody"
+                android:layout_alignLeft="@id/imageBody"
+                android:contentDescription="@string/right_leg_area"
+                android:src="@drawable/non_selected_square" />
+
+            <ImageView
+                android:id="@+id/imageSelRightArm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBody"
+                android:layout_alignLeft="@id/imageBody"
+                android:contentDescription="@string/right_arm_area"
+                android:src="@drawable/non_selected_square" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/form"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_weight="1" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:text="@string/date"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/editDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="date" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:text="@string/Heure" />
+
+                    <EditText
+                        android:id="@+id/editTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:inputType="time" />
+
+                    <TextView
+                        android:id="@+id/textInsulin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/insulin_type" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTypes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textDose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/insulin_dose" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDoses"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/buttonOK"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:contentDescription="@string/ok_picture"
+                    android:gravity="right"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok" />
+
+                <ImageButton
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:contentDescription="@string/cancel_picture"
+                    android:gravity="left"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cancel" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/bodyBackLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/imageBodyBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/body_picture"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/human_body_back" />
+
+            <ImageView
+                android:id="@+id/imageSelRightButtock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBodyBack"
+                android:layout_alignLeft="@id/imageBodyBack"
+                android:contentDescription="@string/right_arm_area"
+                android:src="@drawable/non_selected_square" />
+            
+            <ImageView
+                android:id="@+id/imageSelLeftButtock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imageBodyBack"
+                android:layout_alignLeft="@id/imageBodyBack"
+                android:contentDescription="@string/right_arm_area"
+                android:src="@drawable/non_selected_square" />
+            
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

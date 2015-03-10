@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <TextView
+        android:id="@+id/injectionID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="injectionID" />
+    
+    <TextView
+        android:id="@+id/injectionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="injectionDate" />
+    
+    <TextView
+        android:id="@+id/injectionTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="injectionTime" />
+    
+    <TextView
+        android:id="@+id/insulinType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="insulinType" />
+    
+    <TextView
+        android:id="@+id/injectionDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingLeft="5dp"
+        android:text="injectionDose" />
+    
+    <TextView
+        android:id="@+id/injectionArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="injectionArea" />
+</TableRow>

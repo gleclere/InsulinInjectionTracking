@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ListPreference
+        android:key="export_date_format"
+        android:defaultValue="yyyy/MM/dd"
+        android:entries="@array/pref_date_format_items"
+        android:entryValues="@array/pref_date_format_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_date_format" />
+    
+    <ListPreference
+        android:key="export_separator"
+        android:defaultValue=","
+        android:entries="@array/pref_separator_list"
+        android:entryValues="@array/pref_separator_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_separator" />
+    
+    <ListPreference
+        android:key="export_delimiter"
+        android:defaultValue='"'
+        android:entries="@array/pref_delimiter_list_items"
+        android:entryValues="@array/pref_delimiter_list_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_delimiter" />
+    
+</PreferenceScreen>

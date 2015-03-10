@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Insulin Injection Tracking</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Content Description -->
+
+    <string name="body_picture">Picture of the human body</string>
+    <string name="ok_picture">OK</string>
+    <string name="cancel_picture">Cancel</string>
+    <string name="right_arm_area">Right arm</string>
+    <string name="left_arm_area">Left arm</string>
+    <string name="right_leg_area">Right thigh</string>
+    <string name="left_leg_area">Left thigh</string>
+    <string name="stomach_area">Stomach</string>
+    <string name="right_buttock_area">Right buttock</string>
+    <string name="left_buttock_area">Left buttock</string>
+    <string name="error_insert_ii">Error inserting data</string>
+
+    <!--  Vocabulary -->
+    <string name="insulin_rapid">Rapid</string>
+    <string name="insulin_short">Short</string>
+    <string name="insulin_intermediate">Intermediate</string>
+    <string name="insulin_long">Long</string>
+    <string name="insulin_premixed">Pre-mixed</string>
+    
+    <!-- Releve Activity -->
+
+    <string name="title_activity_releve">Measures</string>
+    <string name="unknow">Unknow</string>
+    <string name="action_share">Export</string>
+    <string name="date">Date</string>
+    <string name="Heure">Time</string>
+    <string name="insulin_type">Insulin type</string>
+    <string name="insulin_dose">Dose</string>
+    <string name="dialog_deleteInjection_msg">Do you want to delete these record?</string>
+    <string name="dialog_deleteInjection_delete">Delete</string>
+    <string name="dialog_deleteInjection_cancel">Cancel</string>
+    
+    <!-- Export Activity -->
+
+    <string name="title_activity_export">Export</string>
+    <string name="export">Export</string>
+	<string name="startDate">Start date</string>    
+	<string name="endDate">End date</string>
+	<string name="errorDateMismatch">Start Date must be before End Date</string>
+
+	<string name="export_subject">2IT Export for %1$s</string>
+	<string name="export_range_date">Export of Injection Insulin Tracking from %1$s to %2$s.</string>
+	
+	<!-- Database columns -->
+    <string name="db_userId">User</string>
+    <string name="db_date">Date</string>
+    <string name="db_time">Time</string>
+    <string name="db_type">Type</string>
+    <string name="db_dose">Dose</string>
+    <string name="db_area">Area</string>
+        		
+</resources>

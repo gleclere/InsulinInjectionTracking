@@ -1,0 +1,49 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- General settings -->
+    <string name="pref_header_general">General</string>
+
+    <!-- Insulines settings -->
+    <string name="pref_header_insulin">Insulin</string>
+    <string name="pref_insulin_min">Minimum</string>
+    <string name="pref_insulin_max">Maximum</string>
+    <string name="pref_insulin_step">Increment</string>
+    
+    <!-- Export settings -->
+    <string name="pref_header_export">Export</string>
+    
+    <!-- http://developer.android.com/reference/java/text/SimpleDateFormat.html -->
+    
+    <string name="pref_title_date_format">Date format</string>
+    <string-array name="pref_date_format_items">
+        <item>YYYY/MM/DD</item>
+        <item>DD/MM/YYYY</item>
+        <item>MM/DD/YYYY</item>
+        </string-array>
+    <string-array name="pref_date_format_values">
+        <item>yyyy/MM/dd</item>
+        <item>dd/MM/yyyy</item>
+        <item>MM/dd/yyyy</item>
+    </string-array>
+    
+    <string name="pref_title_separator">Separator</string>
+    <string-array name="pref_separator_list">
+        <item>;</item>
+        <item>,</item>
+    </string-array>
+    
+    <string name="pref_title_delimiter">Delimiter</string>
+    <string-array name="pref_delimiter_list_items">
+        <item>\"</item>
+        <item>\'</item>
+        <item>none</item>
+        </string-array>
+    <string-array name="pref_delimiter_list_values">
+        <item>\"</item>
+        <item>\'</item>
+        <item></item>
+    </string-array>
+    
+</resources>

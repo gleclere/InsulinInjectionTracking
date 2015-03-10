@@ -1,0 +1,30 @@
+<resources>
+
+    <string name="title_activity_settings">Paramètres</string>
+
+    <!-- General settings -->
+    <string name="pref_header_general">Général</string>
+
+    <!-- Insulines settings -->
+    <string name="pref_header_insulin">Insuline</string>
+    <string name="pref_insulin_min">Minimum</string>
+    <string name="pref_insulin_max">Maximum</string>
+    <string name="pref_insulin_step">Incrément</string>
+    
+    <!-- Export settings -->
+    <string name="pref_header_export">Export</string>
+    
+    <!-- http://developer.android.com/reference/java/text/SimpleDateFormat.html -->
+    
+    <string name="pref_title_date_format">Format des dates</string>
+    
+    <string name="pref_title_separator">Séparateur</string>
+    
+    <string name="pref_title_delimiter">Délimiteur</string>
+    <string-array name="pref_delimiter_list_items">
+        <item>\"</item>
+        <item>\'</item>
+        <item>Aucun</item>
+     </string-array>
+    
+</resources>

@@ -26,13 +26,11 @@ import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TableLayout;
@@ -90,11 +88,16 @@ public class ReleveActivity extends Activity {
 	private long userId = -1;
 	private String userFirstName = "";
 	
-	//Adapters
-	ArrayAdapter<Float> spinnerDosesAdapter;
-	
-	// Settings
-	SharedPreferences sharedPref;
+	// Adapters
+	private ArrayAdapter<String> spinnerTypesAdapter;
+    private ArrayAdapter<Float> spinnerDosesAdapter;
+    private SpinnerTypesListener spinnerTypesListener;
+
+    // Working arrays
+    private List<Integer> managedTypesValues = new ArrayList<Integer>();
+
+    // Settings
+    private SharedPreferences sharedPref;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -239,58 +242,12 @@ public class ReleveActivity extends Activity {
 			}
 		});
 
-		spinnerTypes = (Spinner) findViewById(R.id.spinnerTypes);
-		spinnerTypes.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.types)));
-		spinnerTypes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-		    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-		        selectedType = pos;
-		        
-		        float min=0;
-		        float max=10;
-		        float step=0.5f;
-		        
-		        switch (pos) {
-			        case 0 :				        
-				        min = Float.parseFloat(sharedPref.getString("insulin_rapid_min", "0"));
-				        max = Float.parseFloat(sharedPref.getString("insulin_rapid_max", "10f"));
-				        step = Float.parseFloat(sharedPref.getString("insulin_rapid_step", "0.5f"));
-			        	break;
-			        case 1 :
-				        min = Float.parseFloat(sharedPref.getString("insulin_short_min", "0"));
-				        max = Float.parseFloat(sharedPref.getString("insulin_short_max", "10f"));
-				        step = Float.parseFloat(sharedPref.getString("insulin_short_step", "0.5f"));
-			        	break;
-			        case 2 :
-				        min = Float.parseFloat(sharedPref.getString("insulin_intermediate_min", "0"));
-				        max = Float.parseFloat(sharedPref.getString("insulin_intermediate_max", "10f"));
-				        step = Float.parseFloat(sharedPref.getString("insulin_intermediate_step", "0.5f"));
-			        	break;
-			        case 3 :
-				        min = Float.parseFloat(sharedPref.getString("insulin_long_min", "0"));
-				        max = Float.parseFloat(sharedPref.getString("insulin_long_max", "10f"));
-				        step = Float.parseFloat(sharedPref.getString("insulin_long_step", "0.5f"));
-			        	break;
-			        case 4 :
-				        min = Float.parseFloat(sharedPref.getString("insulin_premixed_min", "0"));
-				        max = Float.parseFloat(sharedPref.getString("insulin_premixed_max", "10f"));
-				        step = Float.parseFloat(sharedPref.getString("insulin_premixed_step", "0.5f"));
-			        	break;
-		        };
-		        
-		        List<Float> doses = new ArrayList<Float>();
-		        
-		        for (float i=min; i<=max; i+=step) {
-		        	doses.add(i);
-		        }
-		        
-		        spinnerDosesAdapter.clear();
-		        spinnerDosesAdapter.addAll(doses);
-		        spinnerDoses.setSelection(Math.round(spinnerDoses.getCount()/2));
+        spinnerTypesAdapter = new ArrayAdapter<String> (this,android.R.layout.simple_dropdown_item_1line);
 
-		    }
-		    public void onNothingSelected(AdapterView<?> parent) {
-		    }
-		});
+		spinnerTypes = (Spinner) findViewById(R.id.spinnerTypes);
+        spinnerTypes.setAdapter(spinnerTypesAdapter);
+        spinnerTypesListener = new SpinnerTypesListener();
+        spinnerTypes.setOnItemSelectedListener(spinnerTypesListener);
 
 		spinnerDosesAdapter = new ArrayAdapter<Float> (this,android.R.layout.simple_dropdown_item_1line);
 		
@@ -316,7 +273,44 @@ public class ReleveActivity extends Activity {
 		loadInsulinInjections();
 	}
 
-	@Override
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // Create insulin types spinner
+        spinnerTypesAdapter.clear();
+        managedTypesValues.clear();
+
+        if (sharedPref.getBoolean("insulin_rapid_managed", true)) {
+            spinnerTypesAdapter.add(getResources().getString(R.string.insulin_rapid));
+            managedTypesValues.add(InsulinInjection.RAPID_ACTING);
+        }
+
+        if (sharedPref.getBoolean("insulin_short_managed", true)) {
+            spinnerTypesAdapter.add(getResources().getString(R.string.insulin_short));
+            managedTypesValues.add(InsulinInjection.SHORT_ACTING);
+        }
+
+
+        if (sharedPref.getBoolean("insulin_intermediate_managed", true)) {
+            spinnerTypesAdapter.add(getResources().getString(R.string.insulin_intermediate));
+            managedTypesValues.add(InsulinInjection.INTERMEDIATE_ACTING);
+        }
+
+        if (sharedPref.getBoolean("insulin_long_managed", true)) {
+            spinnerTypesAdapter.add(getResources().getString(R.string.insulin_long));
+            managedTypesValues.add(InsulinInjection.LONG_ACTING);
+        }
+
+        if (sharedPref.getBoolean("insulin_premixed_managed", true)) {
+            spinnerTypesAdapter.add(getResources().getString(R.string.insulin_premixed));
+            managedTypesValues.add(InsulinInjection.PRE_MIXED);
+        }
+
+        spinnerTypesListener.onItemSelected(null, null, 0, 0);
+    }
+
+    @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.releve, menu);
@@ -371,7 +365,62 @@ public class ReleveActivity extends Activity {
 			}
 		}
 	}
-	
+
+    private class SpinnerTypesListener implements AdapterView.OnItemSelectedListener {
+
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
+            selectedType = managedTypesValues.get(pos);
+
+            float min=0;
+            float max=10;
+            float step=0.5f;
+
+            switch (selectedType) {
+                case 0 :
+                    min = Float.parseFloat(sharedPref.getString("insulin_rapid_min", "0"));
+                    max = Float.parseFloat(sharedPref.getString("insulin_rapid_max", "10f"));
+                    step = Float.parseFloat(sharedPref.getString("insulin_rapid_step", "0.5f"));
+                    break;
+                case 1 :
+                    min = Float.parseFloat(sharedPref.getString("insulin_short_min", "0"));
+                    max = Float.parseFloat(sharedPref.getString("insulin_short_max", "10f"));
+                    step = Float.parseFloat(sharedPref.getString("insulin_short_step", "0.5f"));
+                    break;
+                case 2 :
+                    min = Float.parseFloat(sharedPref.getString("insulin_intermediate_min", "0"));
+                    max = Float.parseFloat(sharedPref.getString("insulin_intermediate_max", "10f"));
+                    step = Float.parseFloat(sharedPref.getString("insulin_intermediate_step", "0.5f"));
+                    break;
+                case 3 :
+                    min = Float.parseFloat(sharedPref.getString("insulin_long_min", "0"));
+                    max = Float.parseFloat(sharedPref.getString("insulin_long_max", "10f"));
+                    step = Float.parseFloat(sharedPref.getString("insulin_long_step", "0.5f"));
+                    break;
+                case 4 :
+                    min = Float.parseFloat(sharedPref.getString("insulin_premixed_min", "0"));
+                    max = Float.parseFloat(sharedPref.getString("insulin_premixed_max", "10f"));
+                    step = Float.parseFloat(sharedPref.getString("insulin_premixed_step", "0.5f"));
+                    break;
+            }
+
+            List<Float> doses = new ArrayList<Float>();
+
+            for (float i=min; i<=max; i+=step) {
+                doses.add(i);
+            }
+
+            spinnerDosesAdapter.clear();
+            spinnerDosesAdapter.addAll(doses);
+            spinnerDoses.setSelection(Math.round(spinnerDoses.getCount()/2));
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
+    }
+
 	private void selectionOnClick(View v) {
 		selectedArea = getSelection(selectedArea,(Integer) v.getTag(R.id.tag_area));
 		majImageSelection(selectedArea);

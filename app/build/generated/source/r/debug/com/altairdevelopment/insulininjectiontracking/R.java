@@ -138,21 +138,22 @@ public final class R {
         public static final int pref_header_export=0x7f090021;
         public static final int pref_header_general=0x7f090022;
         public static final int pref_header_insulin=0x7f090023;
-        public static final int pref_insulin_max=0x7f090024;
-        public static final int pref_insulin_min=0x7f090025;
-        public static final int pref_insulin_step=0x7f090026;
-        public static final int pref_title_date_format=0x7f090027;
-        public static final int pref_title_delimiter=0x7f090028;
-        public static final int pref_title_separator=0x7f090029;
-        public static final int right_arm_area=0x7f09002a;
-        public static final int right_buttock_area=0x7f09002b;
-        public static final int right_leg_area=0x7f09002c;
-        public static final int startDate=0x7f09002d;
-        public static final int stomach_area=0x7f09002e;
-        public static final int title_activity_export=0x7f09002f;
-        public static final int title_activity_releve=0x7f090030;
-        public static final int title_activity_settings=0x7f090031;
-        public static final int unknow=0x7f090032;
+        public static final int pref_insulin_managed=0x7f090024;
+        public static final int pref_insulin_max=0x7f090025;
+        public static final int pref_insulin_min=0x7f090026;
+        public static final int pref_insulin_step=0x7f090027;
+        public static final int pref_title_date_format=0x7f090028;
+        public static final int pref_title_delimiter=0x7f090029;
+        public static final int pref_title_separator=0x7f09002a;
+        public static final int right_arm_area=0x7f09002b;
+        public static final int right_buttock_area=0x7f09002c;
+        public static final int right_leg_area=0x7f09002d;
+        public static final int startDate=0x7f09002e;
+        public static final int stomach_area=0x7f09002f;
+        public static final int title_activity_export=0x7f090030;
+        public static final int title_activity_releve=0x7f090031;
+        public static final int title_activity_settings=0x7f090032;
+        public static final int unknow=0x7f090033;
     }
     public static final class style {
         /** 

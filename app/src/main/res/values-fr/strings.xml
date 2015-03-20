@@ -6,6 +6,9 @@
 
     <!-- Content Description -->
 
+    <string name="body_picture">Picture of the human body</string>
+    <string name="ok_picture">OK</string>
+    <string name="cancel_picture">Cancel</string>
     <string name="right_arm_area">Bras droit</string>
     <string name="left_arm_area">Bras gauche</string>
     <string name="right_leg_area">Cuisse droite</string>

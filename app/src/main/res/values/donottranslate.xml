@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- http://developer.android.com/reference/java/text/SimpleDateFormat.html -->
+
+    <string name="pref_title_date_format">Date format</string>
+    <string-array name="pref_date_format_items">
+        <item>YYYY/MM/DD</item>
+        <item>DD/MM/YYYY</item>
+        <item>MM/DD/YYYY</item>
+    </string-array>
+    <string-array name="pref_date_format_values">
+        <item>yyyy/MM/dd</item>
+        <item>dd/MM/yyyy</item>
+        <item>MM/dd/yyyy</item>
+    </string-array>
+
+    <string name="pref_title_separator">Separator</string>
+    <string-array name="pref_separator_list">
+        <item>;</item>
+        <item>,</item>
+    </string-array>
+
+    <string name="pref_title_delimiter">Delimiter</string>
+    <string-array name="pref_delimiter_list_items">
+        <item>\"</item>
+        <item>\'</item>
+        <item>none</item>
+    </string-array>
+    <string-array name="pref_delimiter_list_values">
+        <item>\"</item>
+        <item>\'</item>
+        <item/>
+    </string-array>
+</resources>

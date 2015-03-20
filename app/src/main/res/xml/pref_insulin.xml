@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
-    <PreferenceScreen android:title="@string/insulin_rapid">
+    <PreferenceScreen
+        android:title="@string/insulin_rapid">
 	    <!-- Rapid -->
-	    <EditTextPreference 
+        <CheckBoxPreference
+            android:key="insulin_rapid_managed"
+            android:title="@string/pref_insulin_managed"
+            android:defaultValue="true"/>
+
+	    <EditTextPreference
 	        android:key="insulin_rapid_min"
 	        android:title="@string/pref_insulin_min"
 	        android:defaultValue="0.5"
@@ -23,7 +29,12 @@
 
     <PreferenceScreen android:title="@string/insulin_short">
 	    <!-- Short -->
-	    <EditTextPreference 
+        <CheckBoxPreference
+            android:key="insulin_short_managed"
+            android:title="@string/pref_insulin_managed"
+            android:defaultValue="true"/>
+
+        <EditTextPreference
 	        android:key="insulin_short_min"
 	        android:title="@string/pref_insulin_min"
 	        android:defaultValue="0.5"
@@ -44,7 +55,12 @@
     
     <PreferenceScreen android:title="@string/insulin_intermediate">
 	    <!-- Intermediate -->
-	    <EditTextPreference 
+        <CheckBoxPreference
+            android:key="insulin_intermediate_managed"
+            android:title="@string/pref_insulin_managed"
+            android:defaultValue="true"/>
+
+        <EditTextPreference
 	        android:key="insulin_intermediate_min"
 	        android:title="@string/pref_insulin_min"
 	        android:defaultValue="0.5"
@@ -65,7 +81,12 @@
     
     <PreferenceScreen android:title="@string/insulin_long">
 	    <!-- Long -->
-	    <EditTextPreference 
+        <CheckBoxPreference
+            android:key="insulin_long_managed"
+            android:title="@string/pref_insulin_managed"
+            android:defaultValue="true"/>
+
+        <EditTextPreference
 	        android:key="insulin_long_min"
 	        android:title="@string/pref_insulin_min"
 	        android:defaultValue="0.5"
@@ -86,7 +107,12 @@
     
     <PreferenceScreen android:title="@string/insulin_premixed">
 	    <!-- Pre-mixed -->
-	    <EditTextPreference 
+        <CheckBoxPreference
+            android:key="insulin_premixed_managed"
+            android:title="@string/pref_insulin_managed"
+            android:defaultValue="true"/>
+
+        <EditTextPreference
 	        android:key="insulin_premixed_min"
 	        android:title="@string/pref_insulin_min"
 	        android:defaultValue="0.5"

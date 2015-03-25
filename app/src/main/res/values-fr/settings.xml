@@ -18,9 +18,8 @@
     <!-- http://developer.android.com/reference/java/text/SimpleDateFormat.html -->
     
     <string name="pref_title_date_format">Format des dates</string>
-    
+    <string name="pref_title_time_format">Format de l\'heure</string>
     <string name="pref_title_separator">Séparateur</string>
-    
     <string name="pref_title_delimiter">Délimiteur</string>
     <string-array name="pref_delimiter_list_items">
         <item>\"</item>

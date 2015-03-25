@@ -49,6 +49,12 @@
 	<string name="export_subject">Export de 2IT pour %1$s</string>
 	<string name="export_range_date">Export de Injection Insulin Tracking du %1$s au %2$s.</string>
 
+    <!-- Import Activity -->
+
+    <string name="title_activity_import">Import</string>
+    <string name="importing">Importer</string>
+    <string name="nb_import">%d lignes importées</string>
+
 	<!-- Database columns -->
     <string name="db_userId">Utilisateur</string>
     <string name="db_date">Date</string>

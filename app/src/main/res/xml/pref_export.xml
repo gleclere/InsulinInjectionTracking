@@ -7,7 +7,16 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/pref_title_date_format" />
-    
+
+    <ListPreference
+        android:key="export_time_format"
+        android:defaultValue="HH:mm"
+        android:entries="@array/pref_time_format_items"
+        android:entryValues="@array/pref_time_format_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_time_format" />
+
     <ListPreference
         android:key="export_separator"
         android:defaultValue=","

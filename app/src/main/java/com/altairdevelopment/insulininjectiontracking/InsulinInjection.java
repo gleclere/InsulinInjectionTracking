@@ -121,7 +121,41 @@ public class InsulinInjection {
 		return null;
 	}
 
-	/**
+    public static int getAreaFromText(Context context, String area) {
+        if (area.equals(context.getString(R.string.right_arm_area))) {
+            return InsulinInjection.RIGHT_ARM;
+        } else if (area.equals(context.getString(R.string.left_arm_area))) {
+            return InsulinInjection.LEFT_ARM;
+        } else if (area.equals(context.getString(R.string.right_leg_area))) {
+            return InsulinInjection.RIGHT_LEG;
+        } else if (area.equals(context.getString(R.string.left_leg_area))) {
+            return InsulinInjection.LEFT_LEG;
+        } else if (area.equals(context.getString(R.string.stomach_area))) {
+            return InsulinInjection.STOMACH;
+        } else if (area.equals(context.getString(R.string.right_buttock_area))) {
+            return InsulinInjection.RIGHT_BUTTOCK;
+        } else if (area.equals(context.getString(R.string.left_buttock_area))) {
+            return InsulinInjection.LEFT_BUTTOCK;
+        }
+        return -1;
+    }
+
+    public static int getTypeFromText(Context context, String type) {
+        if (type.equals(context.getString(R.string.insulin_rapid))) {
+            return InsulinInjection.RAPID_ACTING;
+        } else if (type.equals(context.getString(R.string.insulin_short))) {
+            return InsulinInjection.SHORT_ACTING;
+        } else if (type.equals(context.getString(R.string.insulin_intermediate))) {
+            return InsulinInjection.INTERMEDIATE_ACTING;
+        } else if (type.equals(context.getString(R.string.insulin_long))) {
+            return InsulinInjection.LONG_ACTING;
+        } else if (type.equals(context.getString(R.string.insulin_premixed))) {
+            return InsulinInjection.PRE_MIXED;
+        }
+        return -1;
+    }
+
+    /**
 	 * CSV format of an injection
 	 * 
 	 * @param _ctx  : context

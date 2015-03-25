@@ -139,6 +139,7 @@ public class SettingsActivity extends PreferenceActivity {
 		bindPreferenceSummaryToValue(findPreference("insulin_premixed_step"));
 
 		bindPreferenceSummaryToValue(findPreference("export_date_format"));
+        bindPreferenceSummaryToValue(findPreference("export_time_format"));
 		bindPreferenceSummaryToValue(findPreference("export_separator"));
 		bindPreferenceSummaryToValue(findPreference("export_delimiter"));
 	}
@@ -303,6 +304,7 @@ public class SettingsActivity extends PreferenceActivity {
 			// updated to reflect the new value, per the Android Design
 			// guidelines.
 			bindPreferenceSummaryToValue(findPreference("export_date_format"));
+            bindPreferenceSummaryToValue(findPreference("export_time_format"));
 			bindPreferenceSummaryToValue(findPreference("export_separator"));
 			bindPreferenceSummaryToValue(findPreference("export_delimiter"));
 		}

@@ -9,7 +9,7 @@
         android:fragment="com.altairdevelopment.insulininjectiontracking.SettingsActivity$InsulinPreferenceFragment"
         android:title="@string/pref_header_insulin" />
     <header
-        android:fragment="com.altairdevelopment.insulininjectiontracking.SettingsActivity$NotificationPreferenceFragment"
+        android:fragment="com.altairdevelopment.insulininjectiontracking.SettingsActivity$ExportPreferenceFragment"
         android:title="@string/pref_header_export" />
 
 </preference-headers>

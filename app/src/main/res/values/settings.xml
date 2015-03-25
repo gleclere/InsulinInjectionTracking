@@ -14,5 +14,13 @@
     
     <!-- Export settings -->
     <string name="pref_header_export">Export</string>
-
+    <string name="pref_title_date_format">Date format</string>
+    <string name="pref_title_time_format">Time format</string>
+    <string name="pref_title_separator">Separator</string>
+    <string name="pref_title_delimiter">Delimiter</string>
+    <string-array name="pref_delimiter_list_items">
+        <item>\"</item>
+        <item>\'</item>
+        <item>none</item>
+    </string-array>
 </resources>

@@ -268,9 +268,6 @@ public class ReleveActivity extends Activity {
 		setViewVisibilities(View.INVISIBLE, 0);
 		
 		database = new DBInsulineTracker(this, DBInsulineTracker.dbname, null, DBInsulineTracker.version);
-		database.openDatabase();
-		
-		loadInsulinInjections();
 	}
 
     @Override
@@ -308,6 +305,9 @@ public class ReleveActivity extends Activity {
         }
 
         spinnerTypesListener.onItemSelected(null, null, 0, 0);
+
+        database.openDatabase();
+        loadInsulinInjections();
     }
 
     @Override
@@ -323,7 +323,13 @@ public class ReleveActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		switch (item.getItemId()) {
-			case R.id.action_share :
+            case R.id.action_import:
+                Intent import_data = new Intent(myContext, ImportActivity.class);
+                import_data.putExtra("userId",userId);
+                import_data.putExtra("userFirstName",userFirstName);
+                startActivity(import_data);
+                return true;
+			case R.id.action_export:
 				Intent share = new Intent(myContext, ExportActivity.class);
 				share.putExtra("userId",userId);
 				share.putExtra("userFirstName",userFirstName);

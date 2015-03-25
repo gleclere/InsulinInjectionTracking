@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Program Files\adt-bundle-windows-x86_64\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jar="F:\Program Files\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="D:\Workspace Android Studio\InsulinInjectionTracking\app\build\intermediates\pre-dexed\release\support-v4-19.1.0-24385958c6072a1a5c9dcefe8db14db8cb018161.jar" />
+        <dex dex="D:\Mes documents\Android Workspace\InsulinInjectionTracking\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b33f904495e082b5d5d1eef5b8b4cda4f4773d74.jar" />
     </item>
 
 </items>

@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBInsulineTracker  extends SQLiteOpenHelper {
 
-	final static String dbname=new String("dbinsulintracker");
+	final static String DBNAME =new String("dbinsulintracker");
 	final static int version=1;
 	
 	private SQLiteDatabase db;

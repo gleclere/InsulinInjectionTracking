@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         
         userTable = (TableLayout) findViewById(R.id.userTable);
         
-		database = new DBInsulineTracker(this, DBInsulineTracker.dbname, null, DBInsulineTracker.version);
+		database = new DBInsulineTracker(this, DBInsulineTracker.DBNAME, null, DBInsulineTracker.version);
 		database.openDatabase();
 		loadUsers();
     }
@@ -80,7 +80,7 @@ public class MainActivity extends Activity {
 					TextView userFirstNameView  = (TextView) v.findViewById(R.id.userFirstName);
 
 					Intent myIntent = new Intent(myContext, ReleveActivity.class);
-					myIntent.putExtra("userId", userIDView.getText());
+					myIntent.putExtra("userId", Long.getLong(userIDView.getText().toString()));
 					myIntent.putExtra("userFirstName", userFirstNameView.getText());
 					startActivity(myIntent);		
 				}

@@ -37,7 +37,7 @@ import java.util.Locale;
 
 public class ImportActivity extends Activity {
     private final String importFilename = "iit_export.csv";
-    private int userId = 0;
+    private Integer userId = 0;
     private Context context;
 
     @Override
@@ -103,7 +103,7 @@ public class ImportActivity extends Activity {
 
         // Database
         DBInsulineTracker database;
-        database = new DBInsulineTracker(this, DBInsulineTracker.dbname, null, DBInsulineTracker.version);
+        database = new DBInsulineTracker(this, DBInsulineTracker.DBNAME, null, DBInsulineTracker.version);
         database.openDatabase();
 
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);

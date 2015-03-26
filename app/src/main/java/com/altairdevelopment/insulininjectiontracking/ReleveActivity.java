@@ -12,6 +12,7 @@ import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
+import android.app.backup.BackupManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -203,7 +204,8 @@ public class ReleveActivity extends Activity {
 			public void onClick(View v) {
 				InsulinInjection ii = new InsulinInjection(0, userId, selectedDate, selectedType, selectedDose, selectedArea);
 				if (database.insertInjection(ii)>-1) {
-					loadInsulinInjections();
+                    BackupManager.dataChanged(myContext.getPackageName());
+                    loadInsulinInjections();
 					majImageSelection(NO_SELECTION);
 				} else {
 					Toast.makeText(myContext, myContext.getText(R.string.error_insert_ii), Toast.LENGTH_LONG).show();
@@ -267,7 +269,7 @@ public class ReleveActivity extends Activity {
 		
 		setViewVisibilities(View.INVISIBLE, 0);
 		
-		database = new DBInsulineTracker(this, DBInsulineTracker.dbname, null, DBInsulineTracker.version);
+		database = new DBInsulineTracker(this, DBInsulineTracker.DBNAME, null, DBInsulineTracker.version);
 	}
 
     @Override
@@ -541,6 +543,7 @@ public class ReleveActivity extends Activity {
                        // Delete the current TableRow record currentInsulinInjection
                 	   TextView injectionID = (TextView) currentInsulinInjection.findViewById(R.id.injectionID);
                 	   database.deleteInjection(Integer.parseInt(injectionID.getText().toString()));
+                       BackupManager.dataChanged(myContext.getPackageName());
                 	   loadInsulinInjections();
                    }
                })

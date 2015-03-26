@@ -34,7 +34,7 @@ public class ExportActivity extends Activity {
     private DateFormat dateFormat = DateFormat.getDateInstance();
     private EditText startDate;
     private EditText endDate;
-    private int userId = 0;
+    private Integer userId = 0;
     private String userFirstName;
     private String exportFilename = "iit_export.csv";
 	
@@ -179,7 +179,7 @@ public class ExportActivity extends Activity {
 		
 		// Database
 		DBInsulineTracker database;
-		database = new DBInsulineTracker(this, DBInsulineTracker.dbname, null, DBInsulineTracker.version);
+		database = new DBInsulineTracker(this, DBInsulineTracker.DBNAME, null, DBInsulineTracker.version);
 		database.openDatabase();
 
         database.selectInjectionsByDate(userId, exportStartDate.getTimeInMillis(), exportEndDate.getTimeInMillis());

@@ -1,2 +1,2 @@
-D:\Mes documents\Android Workspace\InsulinInjectionTracking\app\build\intermediates\classes\debug
-D:\Mes documents\Android Workspace\InsulinInjectionTracking\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-b33f904495e082b5d5d1eef5b8b4cda4f4773d74.jar
+D:\Workspace Android Studio\InsulinInjectionTracking\app\build\intermediates\classes\debug
+D:\Workspace Android Studio\InsulinInjectionTracking\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-24385958c6072a1a5c9dcefe8db14db8cb018161.jar
